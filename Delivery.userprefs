@@ -1,0 +1,22 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Carrinho.cs">
+    <Files>
+      <File FileName="CarrEmpresa.cs" Line="1" Column="1" />
+      <File FileName="Carrinho.cs" Line="18" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\TI\Desktop\Aplicativos\Menu\Menu\Menu\BancodeDados\BbCadProduto.cs" line="151" column="1" />
+      <Breakpoint file="C:\Users\TI\Desktop\Aplicativos\Menu\Menu\Menu\Web References\WS\Reference.cs" line="378" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="CardLoja.cs" line="65" offsetX="780" offsetY="1650" expression="txtTeste.Text" liveUpdate="False" />
+    <Watch file="CardLoja.cs" line="89" offsetX="651" offsetY="1496" expression="lsCategoria.Items[0].ativo" liveUpdate="False" />
+    <Watch file="CardCategoriaProdutoLoja.cs" line="95" offsetX="613" offsetY="1410" expression="sql_cursor" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <AuthorInfo Name="Felipe Nunes " Email="felipe@" Copyright="FnFSys" Company="FnF" Trademark="" />
+  <MonoDevelop.Ide.ItemProperties.FastDelivery MonoForAntroid.PreferredDevice="3.3&quot; WQVGA" AndroidDeviceId-Release="emulator-5554" AndroidDeviceId-Debug="emulator-5554" />
+</Properties>

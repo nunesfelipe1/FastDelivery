@@ -1,0 +1,10 @@
+Para Alinhar o APK:
+
+copiei o menu.delivery da pasta bin do java para a pasta keystore
+
+
+cd\ 
+
+cd C:\Users\TI\AppData\Local\Android\android-sdk\tools\
+
+zipalign.exe -v 4 C:\Users\TI\Desktop\Aplicativos\Menu\Menu\Menu\KeyStore\menu.fastdelivery.apk C:\Users\TI\Desktop\Aplicativos\Menu\Menu\Menu\KeyStore\apalign.apk

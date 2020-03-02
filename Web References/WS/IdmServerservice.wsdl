@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://www.borland.com/namespaces/Types" name="IdmServerservice" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema xmlns="http://www.borland.com/namespaces/Types" targetNamespace="http://www.borland.com/namespaces/Types">
+      <xs:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xs:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+      <xs:complexType name="TWideStringDynArray">
+        <xs:complexContent mixed="false">
+          <xs:restriction base="soapenc:Array">
+            <xs:sequence />
+            <xs:attribute xmlns:n1="http://schemas.xmlsoap.org/wsdl/" n1:arrayType="xs:string[]" ref="soapenc:arrayType" />
+          </xs:restriction>
+        </xs:complexContent>
+      </xs:complexType>
+    </xs:schema>
+  </types>
+  <message name="SAS_ApplyUpdates0Request">
+    <part name="ProviderName" type="xs:string" />
+    <part name="Delta" type="xs:anyType" />
+    <part name="MaxErrors" type="xs:int" />
+    <part name="OwnerData" type="xs:anyType" />
+  </message>
+  <message name="SAS_ApplyUpdates0Response">
+    <part name="ErrorCount" type="xs:int" />
+    <part name="OwnerData" type="xs:anyType" />
+    <part name="return" type="xs:anyType" />
+  </message>
+  <message name="SAS_GetRecords1Request">
+    <part name="ProviderName" type="xs:string" />
+    <part name="Count" type="xs:int" />
+    <part name="Options" type="xs:int" />
+    <part name="CommandText" type="xs:string" />
+    <part name="Params" type="xs:anyType" />
+    <part name="OwnerData" type="xs:anyType" />
+  </message>
+  <message name="SAS_GetRecords1Response">
+    <part name="RecsOut" type="xs:int" />
+    <part name="Params" type="xs:anyType" />
+    <part name="OwnerData" type="xs:anyType" />
+    <part name="return" type="xs:anyType" />
+  </message>
+  <message name="SAS_DataRequest2Request">
+    <part name="ProviderName" type="xs:string" />
+    <part name="Data" type="xs:anyType" />
+  </message>
+  <message name="SAS_DataRequest2Response">
+    <part name="return" type="xs:anyType" />
+  </message>
+  <message name="SAS_GetProviderNames3Request" />
+  <message name="SAS_GetProviderNames3Response">
+    <part name="return" type="ns1:TWideStringDynArray" />
+  </message>
+  <message name="SAS_GetParams4Request">
+    <part name="ProviderName" type="xs:string" />
+    <part name="OwnerData" type="xs:anyType" />
+  </message>
+  <message name="SAS_GetParams4Response">
+    <part name="OwnerData" type="xs:anyType" />
+    <part name="return" type="xs:anyType" />
+  </message>
+  <message name="SAS_RowRequest5Request">
+    <part name="ProviderName" type="xs:string" />
+    <part name="Row" type="xs:anyType" />
+    <part name="RequestType" type="xs:int" />
+    <part name="OwnerData" type="xs:anyType" />
+  </message>
+  <message name="SAS_RowRequest5Response">
+    <part name="OwnerData" type="xs:anyType" />
+    <part name="return" type="xs:anyType" />
+  </message>
+  <message name="SAS_Execute6Request">
+    <part name="ProviderName" type="xs:string" />
+    <part name="CommandText" type="xs:string" />
+    <part name="Params" type="xs:anyType" />
+    <part name="OwnerData" type="xs:anyType" />
+  </message>
+  <message name="SAS_Execute6Response">
+    <part name="Params" type="xs:anyType" />
+    <part name="OwnerData" type="xs:anyType" />
+  </message>
+  <message name="RetCodigoMesa7Request">
+    <part name="codEmpresa" type="xs:int" />
+    <part name="numMesa" type="xs:int" />
+  </message>
+  <message name="RetCodigoMesa7Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="CarregaCategoria8Request">
+    <part name="codEmpresa" type="xs:string" />
+  </message>
+  <message name="CarregaCategoria8Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="VerificaCodigoMesa9Request">
+    <part name="codMesa" type="xs:string" />
+    <part name="codEmpresa" type="xs:int" />
+    <part name="numMesa" type="xs:int" />
+  </message>
+  <message name="VerificaCodigoMesa9Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="CarregaEmpresa10Request" />
+  <message name="CarregaEmpresa10Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="CarregaProduto11Request">
+    <part name="codEmpresa" type="xs:string" />
+  </message>
+  <message name="CarregaProduto11Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="GravaPedido12Request">
+    <part name="codPedido" type="xs:int" />
+    <part name="codEmpresa" type="xs:int" />
+    <part name="numMesa" type="xs:int" />
+    <part name="dataPedido" type="xs:string" />
+    <part name="valorTotal" type="xs:string" />
+    <part name="numSerial" type="xs:string" />
+    <part name="numCelular" type="xs:string" />
+    <part name="dataFechado" type="xs:string" />
+    <part name="codigoMesa" type="xs:string" />
+  </message>
+  <message name="GravaPedido12Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="GravaPedidoItem13Request">
+    <part name="codEmpresa" type="xs:int" />
+    <part name="codPedido" type="xs:int" />
+    <part name="itemPedido" type="xs:int" />
+    <part name="codProduto" type="xs:int" />
+    <part name="qtde" type="xs:string" />
+    <part name="precoUnit" type="xs:string" />
+    <part name="numSerial" type="xs:string" />
+    <part name="numCelular" type="xs:string" />
+    <part name="lembrete" type="xs:string" />
+    <part name="qtdItemEnviado" type="xs:string" />
+    <part name="codEnvio" type="xs:string" />
+  </message>
+  <message name="GravaPedidoItem13Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="RetornaProxCodPedido14Request">
+    <part name="codEmpresa" type="xs:string" />
+  </message>
+  <message name="RetornaProxCodPedido14Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="AtualizaPedido15Request">
+    <part name="codEmpresa" type="xs:int" />
+    <part name="codPedido" type="xs:int" />
+    <part name="numMesa" type="xs:int" />
+    <part name="valorTotal" type="xs:string" />
+  </message>
+  <message name="AtualizaPedido15Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="VerificaPedido16Request">
+    <part name="codEmpresa" type="xs:int" />
+    <part name="codPedido" type="xs:int" />
+    <part name="numMesa" type="xs:int" />
+  </message>
+  <message name="VerificaPedido16Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="RetornaSubTotal17Request">
+    <part name="codEmpresa" type="xs:int" />
+    <part name="numMesa" type="xs:int" />
+  </message>
+  <message name="RetornaSubTotal17Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="Estatistica18Request">
+    <part name="sProcesso" type="xs:string" />
+    <part name="sData" type="xs:string" />
+    <part name="codEmpresa" type="xs:int" />
+    <part name="sCodMesa" type="xs:int" />
+  </message>
+  <message name="Estatistica18Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="CarregaMensagem19Request">
+    <part name="codEmpresa" type="xs:string" />
+  </message>
+  <message name="CarregaMensagem19Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="CarregaStatus20Request">
+    <part name="codEmpresa" type="xs:string" />
+  </message>
+  <message name="CarregaStatus20Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <portType name="IdmServer">
+    <operation name="SAS_ApplyUpdates">
+      <input message="tns:SAS_ApplyUpdates0Request" />
+      <output message="tns:SAS_ApplyUpdates0Response" />
+    </operation>
+    <operation name="SAS_GetRecords">
+      <input message="tns:SAS_GetRecords1Request" />
+      <output message="tns:SAS_GetRecords1Response" />
+    </operation>
+    <operation name="SAS_DataRequest">
+      <input message="tns:SAS_DataRequest2Request" />
+      <output message="tns:SAS_DataRequest2Response" />
+    </operation>
+    <operation name="SAS_GetProviderNames">
+      <input message="tns:SAS_GetProviderNames3Request" />
+      <output message="tns:SAS_GetProviderNames3Response" />
+    </operation>
+    <operation name="SAS_GetParams">
+      <input message="tns:SAS_GetParams4Request" />
+      <output message="tns:SAS_GetParams4Response" />
+    </operation>
+    <operation name="SAS_RowRequest">
+      <input message="tns:SAS_RowRequest5Request" />
+      <output message="tns:SAS_RowRequest5Response" />
+    </operation>
+    <operation name="SAS_Execute">
+      <input message="tns:SAS_Execute6Request" />
+      <output message="tns:SAS_Execute6Response" />
+    </operation>
+    <operation name="RetCodigoMesa">
+      <input message="tns:RetCodigoMesa7Request" />
+      <output message="tns:RetCodigoMesa7Response" />
+    </operation>
+    <operation name="CarregaCategoria">
+      <input message="tns:CarregaCategoria8Request" />
+      <output message="tns:CarregaCategoria8Response" />
+    </operation>
+    <operation name="VerificaCodigoMesa">
+      <input message="tns:VerificaCodigoMesa9Request" />
+      <output message="tns:VerificaCodigoMesa9Response" />
+    </operation>
+    <operation name="CarregaEmpresa">
+      <input message="tns:CarregaEmpresa10Request" />
+      <output message="tns:CarregaEmpresa10Response" />
+    </operation>
+    <operation name="CarregaProduto">
+      <input message="tns:CarregaProduto11Request" />
+      <output message="tns:CarregaProduto11Response" />
+    </operation>
+    <operation name="GravaPedido">
+      <input message="tns:GravaPedido12Request" />
+      <output message="tns:GravaPedido12Response" />
+    </operation>
+    <operation name="GravaPedidoItem">
+      <input message="tns:GravaPedidoItem13Request" />
+      <output message="tns:GravaPedidoItem13Response" />
+    </operation>
+    <operation name="RetornaProxCodPedido">
+      <input message="tns:RetornaProxCodPedido14Request" />
+      <output message="tns:RetornaProxCodPedido14Response" />
+    </operation>
+    <operation name="AtualizaPedido">
+      <input message="tns:AtualizaPedido15Request" />
+      <output message="tns:AtualizaPedido15Response" />
+    </operation>
+    <operation name="VerificaPedido">
+      <input message="tns:VerificaPedido16Request" />
+      <output message="tns:VerificaPedido16Response" />
+    </operation>
+    <operation name="RetornaSubTotal">
+      <input message="tns:RetornaSubTotal17Request" />
+      <output message="tns:RetornaSubTotal17Response" />
+    </operation>
+    <operation name="Estatistica">
+      <input message="tns:Estatistica18Request" />
+      <output message="tns:Estatistica18Response" />
+    </operation>
+    <operation name="CarregaMensagem">
+      <input message="tns:CarregaMensagem19Request" />
+      <output message="tns:CarregaMensagem19Response" />
+    </operation>
+    <operation name="CarregaStatus">
+      <input message="tns:CarregaStatus20Request" />
+      <output message="tns:CarregaStatus20Response" />
+    </operation>
+  </portType>
+  <binding name="IdmServerbinding" type="tns:IdmServer">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <operation name="SAS_ApplyUpdates">
+      <soap:operation soapAction="urn:ModuloServer-IdmServer#SAS_ApplyUpdates" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="SAS_GetRecords">
+      <soap:operation soapAction="urn:ModuloServer-IdmServer#SAS_GetRecords" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="SAS_DataRequest">
+      <soap:operation soapAction="urn:ModuloServer-IdmServer#SAS_DataRequest" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="SAS_GetProviderNames">
+      <soap:operation soapAction="urn:ModuloServer-IdmServer#SAS_GetProviderNames" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="SAS_GetParams">
+      <soap:operation soapAction="urn:ModuloServer-IdmServer#SAS_GetParams" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="SAS_RowRequest">
+      <soap:operation soapAction="urn:ModuloServer-IdmServer#SAS_RowRequest" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="SAS_Execute">
+      <soap:operation soapAction="urn:ModuloServer-IdmServer#SAS_Execute" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="RetCodigoMesa">
+      <soap:operation soapAction="urn:ModuloServer-IdmServer#RetCodigoMesa" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="CarregaCategoria">
+      <soap:operation soapAction="urn:ModuloServer-IdmServer#CarregaCategoria" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="VerificaCodigoMesa">
+      <soap:operation soapAction="urn:ModuloServer-IdmServer#VerificaCodigoMesa" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="CarregaEmpresa">
+      <soap:operation soapAction="urn:ModuloServer-IdmServer#CarregaEmpresa" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="CarregaProduto">
+      <soap:operation soapAction="urn:ModuloServer-IdmServer#CarregaProduto" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="GravaPedido">
+      <soap:operation soapAction="urn:ModuloServer-IdmServer#GravaPedido" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="GravaPedidoItem">
+      <soap:operation soapAction="urn:ModuloServer-IdmServer#GravaPedidoItem" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="RetornaProxCodPedido">
+      <soap:operation soapAction="urn:ModuloServer-IdmServer#RetornaProxCodPedido" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="AtualizaPedido">
+      <soap:operation soapAction="urn:ModuloServer-IdmServer#AtualizaPedido" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="VerificaPedido">
+      <soap:operation soapAction="urn:ModuloServer-IdmServer#VerificaPedido" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="RetornaSubTotal">
+      <soap:operation soapAction="urn:ModuloServer-IdmServer#RetornaSubTotal" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="Estatistica">
+      <soap:operation soapAction="urn:ModuloServer-IdmServer#Estatistica" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="CarregaMensagem">
+      <soap:operation soapAction="urn:ModuloServer-IdmServer#CarregaMensagem" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="CarregaStatus">
+      <soap:operation soapAction="urn:ModuloServer-IdmServer#CarregaStatus" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:ModuloServer-IdmServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="IdmServerservice">
+    <port name="IdmServerPort" binding="tns:IdmServerbinding">
+      <soap:address location="http://localhost:8091/wsfastdelivery/WsFastDelivery.dll/soap/IdmServer" />
+    </port>
+  </service>
+</definitions>

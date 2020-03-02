@@ -1,0 +1,9 @@
+Para Assinar o APK:
+copiar o fastdelivery.jks + menu.fastdelivery.apk para a pasta bin do java
+
+cd\
+
+cd C:\Program Files (x86)\Java\jdk1.6.0_39\bin\
+
+
+jarsigner -verbose -keystore fastdelivery menu.fastdelivery.apk fastdelivery
